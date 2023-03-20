@@ -1,0 +1,12 @@
+.alert-warning{
+    float: left;
+    clear: right;
+    width: 550px;
+    margin: 20px 34%;
+    text-align: left;
+
+}
+body {
+    background: #c6ffea;
+}
+

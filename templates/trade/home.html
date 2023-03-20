@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<a href="test.html"><button style="width: 150px">Create</button></a>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'admin/css/mystyle.css' %}">
+<body>
+
+
+
+
+    {% for el in basic %}
+    <div class ="alert alert-warning">
+        <h1 style="text-align: center">{{ el.title }}</h1>
+        <h2>{{ el.category}}</h2>
+        <hr>
+        <h4>{{ el.description }}</h4>
+        <hr>
+
+        <h6><a href="update/{{ el.id }}">Update</a></h6>
+        <h6><a href="delete/{{ el.id }}">Delete</a></h6>
+
+
+        <img src="{{ el.image_big.url }}" width="400" height="400">
+        <hr>
+        <img src="{{ el.image_small.url }}"width="450" height="240">
+
+        </div>
+    {% endfor %}
+
+</body>
+</html>
